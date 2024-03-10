@@ -40,11 +40,21 @@ def randcode(digits):
         else:
             randcode = randcode + str(rcrandstr())
     return randcode
+
 #randbool:if you want to print on,code "randbool()"
 #The randbool() values can be assigned in variables.
 def randbool():
     randbool = randint(0,1)
     return bool(randbool)
+#Randspace:
+def randspace(first,last):
+    a = randint(0,100)
+    rsbool = ''
+    if a >= first:
+        rsbool = 0
+    else:
+        rsbool = 1
+    return bool (rsbool)
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():
