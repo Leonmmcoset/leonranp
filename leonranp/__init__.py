@@ -98,8 +98,8 @@ def sample():
         else:
             print('False')
     if sample == 2:
-        randspace(0,50)
-        if True:
+        sam2 = randspace(0,50)
+        if sam2 == True:
             print('You are so lucky today!')
         else:
             print('Oh no!')
