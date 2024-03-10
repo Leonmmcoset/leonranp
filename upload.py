@@ -1,6 +1,9 @@
 #To upload,run this python file.
 from os import *
 print('---Start Upload---')
+system(f'git add .')
+system(f'git commit -m "Normal update"')
+system(f'git push origin main')
 system(f'del /Q build')
 system(f'del /Q dist')
 system(f'del /Q leonranp.egg-info')
