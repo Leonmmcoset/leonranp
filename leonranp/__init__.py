@@ -11,6 +11,7 @@ print('-------------Leon Random Plus-------------')
 print('You are using Leon Random Plus')
 print('PyPI:https://pypi.org/project/leonranp/')
 print('Wiki:http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranp')
+print('Github:https://github.com/Leonmmcoset/leonranp/')
 print('To upgrade,use "upgrade()" on your shell')
 print('To have help,use "lrphelp()"')
 print('To delete Leon Random Plus,use "dellrp()"')
@@ -46,15 +47,16 @@ def randcode(digits):
 def randbool():
     randbool = randint(0,1)
     return bool(randbool)
-#Randspace:
+#Randspace:this is so unclear explanation!
+#Please see on:http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranp#what_is_randspace
+#To see,use "print(leonranp.randspace())"
 def randspace(first,last):
     a = randint(0,100)
-    rsbool = ''
-    if a >= first:
-        rsbool = 0
-    else:
+    if a >= first and a<= last:
         rsbool = 1
-    return bool (rsbool)
+    else:
+        rsbool = 0
+    return bool(rsbool)
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():

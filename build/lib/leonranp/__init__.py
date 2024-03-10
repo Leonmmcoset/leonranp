@@ -11,6 +11,7 @@ print('-------------Leon Random Plus-------------')
 print('You are using Leon Random Plus')
 print('PyPI:https://pypi.org/project/leonranp/')
 print('Wiki:http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranp')
+print('Github:https://github.com/Leonmmcoset/leonranp/')
 print('To upgrade,use "upgrade()" on your shell')
 print('To have help,use "lrphelp()"')
 print('To delete Leon Random Plus,use "dellrp()"')
@@ -40,11 +41,22 @@ def randcode(digits):
         else:
             randcode = randcode + str(rcrandstr())
     return randcode
+
 #randbool:if you want to print on,code "randbool()"
 #The randbool() values can be assigned in variables.
 def randbool():
     randbool = randint(0,1)
     return bool(randbool)
+#Randspace:this is so unclear explanation!
+#Please see on:http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranp#what_is_randspace
+#To see,use "print(leonranp.randspace())"
+def randspace(first,last):
+    a = randint(0,100)
+    if a >= first and a<= last:
+        rsbool = 1
+    else:
+        rsbool = 0
+    return bool(rsbool)
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():
@@ -71,6 +83,8 @@ def dellrp():
 #Sample code:
 def sample():
     print('---Sample code section---')
+    print('This is only for running sample code!')
+    print('To check the source code of sample,go to http://http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranpsamplecode')
     print('1.Sample Captcha (6 digits)')
     a = int(input('Choose section:'))
     print('-------------------------')
