@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: leonranp
-Version: 0.0.7
+Version: 0.0.7.2
 Summary: This is Leon Random Plus,that add more functions to the random!
 Home-page: https://github.com/Leonmmcoset/leonranp
 Author: LeonMMcoset
@@ -10,7 +10,6 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
-License-File: LICENSE
 License-File: LICENSE.txt
 
 # Leon Random Plus

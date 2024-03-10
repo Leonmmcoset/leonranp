@@ -30,8 +30,8 @@ def randstr():
 #The randcode() values can be assigned in variables.
 #To print randcode,code "print(randcode())"
 def rcrandstr():
-    randstrlist = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    rcrandstr = choice(randstrlist)
+    rcrandstrlist = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    rcrandstr = choice(rcrandstrlist)
     return rcrandstr
 def randcode(digits):
     randcode = ''
@@ -86,9 +86,10 @@ def sample():
     print('This is only for running sample code!')
     print('To check the source code of sample,go to http://http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranpsamplecode')
     print('1.Sample Captcha (6 digits)')
-    a = int(input('Choose section:'))
+    print('2.Lucky Or Not')
+    sample = int(input('Choose section:'))
     print('-------------------------')
-    if a == 1:
+    if sample == 1:
         a = randcode(6)
         print(a)
         b = input('Captcha code:')
@@ -96,5 +97,11 @@ def sample():
             print('True')
         else:
             print('False')
+    if sample == 2:
+        randspace(0,50)
+        if True:
+            print('You are so lucky today!')
+        else:
+            print('Oh no!')
     print('--------------------------')
     print('Thanks for use!')
