@@ -47,7 +47,7 @@ def randcode(digits):
 def randbool():
     randbool = randint(0,1)
     return bool(randbool)
-#Randspace:this is so unclear explanation!
+#randspace:this is so unclear explanation!
 #Please see on:http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranp#what_is_randspace
 #To see,use "print(leonranp.randspace())"
 def randspace(first,last):
@@ -57,6 +57,16 @@ def randspace(first,last):
     else:
         rsbool = 0
     return bool(rsbool)
+#randlistint/str:Random list int or str.
+def randlistint(list,intfirst,intlast):
+    for rli in range(list):
+        rlint = randint(intfirst,intlast)
+        print(rlint)
+def randliststr(list):
+    str = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    for rls in range(list):
+        rlsa = choice(str)
+        print(rlsa)
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():
@@ -98,10 +108,11 @@ def sample():
         else:
             print('False')
     if sample == 2:
-        sam2 = randspace(0,50)
+        sam2 = randspace(0,30)
         if sam2 == True:
             print('You are so lucky today!')
         else:
-            print('Oh no!')
+            print('Oh no!You are not lucky today!')
+            print('Go to http://leonmmcoset.jjmm.ink:8002/doku.php?id=iamnotlucky')
     print('--------------------------')
     print('Thanks for use!')
