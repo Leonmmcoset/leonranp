@@ -4,7 +4,7 @@ This is Leon Random Plus,that add more functions to the random!
 
 To use it,code "import leonranp"
 
-This package can use with random.
+No need to import random,because this package is import random.
 
 ## Website
 

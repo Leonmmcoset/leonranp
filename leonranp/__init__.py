@@ -58,15 +58,18 @@ def randspace(first,last):
         rsbool = 0
     return bool(rsbool)
 #randlistint/str:Random list int or str.
+#To print it,"print(randlistint/str())"
 def randlistint(list,intfirst,intlast):
+    rlint = []
     for rli in range(list):
-        rlint = randint(intfirst,intlast)
-        print(rlint)
+        rlint.append(randint(intfirst,intlast))
+    return rlint
 def randliststr(list):
     str = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    rlsa = []
     for rls in range(list):
-        rlsa = choice(str)
-        print(rlsa)
+        rlsa.append(choice(str))
+    return rlsa
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():
