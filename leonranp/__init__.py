@@ -19,7 +19,6 @@ print('------------------------------------------')
 #Code Running Info End
 from random import *
 from os import *
-
 #Start Code#
 #randstr:just code "randstr()".
 def randstr():
@@ -57,8 +56,8 @@ def randspace(first,last):
     else:
         rsbool = 0
     return bool(rsbool)
-#randlistint/str:Random list int or str.
-#To print it,"print(randlistint/str())"
+#randlistint/str/code:Random list int or str.
+#To print it,"print(randlistint/str/code())"
 def randlistint(list,intfirst,intlast):
     rlint = []
     for rli in range(list):
@@ -70,12 +69,19 @@ def randliststr(list):
     for rls in range(list):
         rlsa.append(choice(str))
     return rlsa
+def randlistcode(list):
+    rlc = []
+    rlca = ''
+    for rlcr in range(list):
+        if randint(0, 1) == 0:
+            rlc.append(str(rlca) + str(randint(0, 9)))
+        else:
+            rlc.append(str(rlca) + str(rcrandstr()))
+    return rlc
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():
-    package_name = 'requests'
-    system(f'pip install --upgrade leonranp')
-    print('If upgrade is done,please restart your IDLE.')
+    system(f'pip install leonranp')
 #End Upgrade Code
 #You can use "leonranp.help()" to get help!
 def lrphelp():

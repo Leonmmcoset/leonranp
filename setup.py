@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="leonranp",  # 用自己的名替换其中的YOUR_USERNAME_
-    version="0.0.8.2",  # 包版本号，便于维护版本
+    version="0.0.9",  # 包版本号，便于维护版本
     author="LeonMMcoset",  # 作者，可以写自己的姓名
     author_email="leonmmcoset@outlook.com",  # 作者联系方式，可写自己的邮箱地址
     description="This is Leon Random Plus,that add more functions to the random!",  # 包的简述
