@@ -5,6 +5,9 @@ This is Leon Random Plus,that add more functions to the random!
 To use it,code "import leonranp"
 
 Copyright LeonMMcoset.All rights reserved.
+
+Star my github project!
+I will update more and more!
 '''
 #Code Running Info Start
 print('-------------Leon Random Plus-------------')
@@ -78,6 +81,32 @@ def randlistcode(list):
         else:
             rlc.append(str(rlca) + str(rcrandstr()))
     return rlc
+#randstrbs:random string that is big and small.
+#To print it,"print(randstrbs())"
+def randstrbs():
+    rsbsA = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U','V', 'W', 'X', 'Y', 'Z']
+    rsbs = choice(rsbsA)
+    return rsbs
+#randcodebs:random code string that is big and small.
+#To print it,"print(randcodebs())"
+def randcodebs(digits):
+    randcodebs = ''
+    for rsbs in range(digits):
+        rcbsR = randint(0,2)
+        if rcbsR==0:
+            randcodebs = randcodebs + str(randint(0, 9))
+        elif rcbsR==1:
+            randcodebs = randcodebs + str(rcrandstr())
+        else:
+            randcodebs = randcodebs + str(randstrbs())
+    return randcodebs
+#THIS MAY CRASH YOUR IDLE,PLEASE SAVE YOUR ALL FILES!!!
+def crashidle():
+    print('This may crash your IDLE!!!')
+    print('Please sure you save your code!')
+    input('Press <Enter> to begin crash.')
+    while True:
+        randcode(6)
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():
@@ -87,11 +116,14 @@ def upgrade():
 def lrphelp():
     print('---Leon Random Plus Help Start---')
     print('randstr() -> Random string')
-    print('randcode(digits) -> Random code(such as print a675a or 687dsa or 7s8 and more).')
+    print('randcode(digits) -> Random code(such as print a675a or 687dsa or 7s8 and more)')
     print('upgrade() -> Upgrade Leon Random Plus')
     print('randbool() -> Random bool')
     print('dellrp() -> Delete Leon Random Plus')
     print('sample() -> Sample code')
+    print('crashidle() -> Crash my IDLE')
+    print('randstrbs() -> Random string that is big and small')
+    print('randcodebs() -> Random code string that is big and small')
     print('---Leon Random Plus Help End---')
 #Del. Leon Random Plus
 #OMG you are gonna delete Leon Random Plus???
