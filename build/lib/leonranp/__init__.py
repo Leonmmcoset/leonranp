@@ -6,19 +6,15 @@ To use it,code "import leonranp"
 
 Copyright LeonMMcoset.All rights reserved.
 
-Star my github project!
+Star my Github project!
 I will update more and more!
+Github project:https://github.com/Leonmmcoset/
 '''
-#Code Running Info Start
-print('-------------Leon Random Plus-------------')
-print('You are using Leon Random Plus')
-print('PyPI:https://pypi.org/project/leonranp/')
-print('Wiki:http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranp')
-print('Github:https://github.com/Leonmmcoset/leonranp/')
-print('To upgrade,use "upgrade()" on your shell')
-print('To have help,use "lrphelp()"')
-print('To delete Leon Random Plus,use "dellrp()"')
-print('------------------------------------------')
+class RandomError(Exception):
+    def __init__(self,text):
+        self.text = text
+    def __str__(self):
+        return self.text
 #Code Running Info End
 from random import *
 from os import *
@@ -36,6 +32,8 @@ def rcrandstr():
     rcrandstr = choice(rcrandstrlist)
     return rcrandstr
 def randcode(digits):
+    if digits == 0:
+        raise RandomError("Digits can't be 0!")
     randcode = ''
     for i in range(digits):
         if randint(0,1)==0:
@@ -62,17 +60,23 @@ def randspace(first,last):
 #randlistint/str/code:Random list int or str.
 #To print it,"print(randlistint/str/code())"
 def randlistint(list,intfirst,intlast):
+    if list == 0:
+        raise RandomError("list can't be 0!")
     rlint = []
     for rli in range(list):
         rlint.append(randint(intfirst,intlast))
     return rlint
 def randliststr(list):
+    if list == 0:
+        raise RandomError("list can't be 0!")
     str = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     rlsa = []
     for rls in range(list):
         rlsa.append(choice(str))
     return rlsa
 def randlistcode(list):
+    if list == 0:
+        raise RandomError("list can't be 0!")
     rlc = []
     rlca = ''
     for rlcr in range(list):
@@ -90,6 +94,8 @@ def randstrbs():
 #randcodebs:random code string that is big and small.
 #To print it,"print(randcodebs())"
 def randcodebs(digits):
+    if digits == 0:
+        raise RandomError("digits can't be 0!")
     randcodebs = ''
     for rsbs in range(digits):
         rcbsR = randint(0,2)
@@ -104,9 +110,16 @@ def randcodebs(digits):
 def crashidle():
     print('This may crash your IDLE!!!')
     print('Please sure you save your code!')
-    input('Press <Enter> to begin crash.')
     while True:
-        randcode(6)
+        yorn = str(input('Input Y/N:'))
+        if yorn =='Y' or yorn =='y':
+            while True:
+                randcode(6)
+        elif yorn =='N' or yorn =='n':
+            break
+        else:
+            print('Use Y as yes,N as no.')
+
 #End Code#
 #Start Upgrade Code(use "upgrade()" to upgrade Leon Random Plus)
 def upgrade():
@@ -124,6 +137,7 @@ def lrphelp():
     print('crashidle() -> Crash my IDLE')
     print('randstrbs() -> Random string that is big and small')
     print('randcodebs() -> Random code string that is big and small')
+    print('lrpinfo() -> Leon Random Plus info')
     print('---Leon Random Plus Help End---')
 #Del. Leon Random Plus
 #OMG you are gonna delete Leon Random Plus???
@@ -157,3 +171,6 @@ def sample():
             print('Go to http://leonmmcoset.jjmm.ink:8002/doku.php?id=iamnotlucky')
     print('--------------------------')
     print('Thanks for use!')
+#Info for Leon Random Plus
+def lrpinfo():
+    import InfoWindow

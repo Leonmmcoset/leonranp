@@ -1,6 +1,7 @@
 LICENSE.txt
 README.md
 setup.py
+leonranp/InfoWindow.py
 leonranp/__init__.py
 leonranp/test.py
 leonranp.egg-info/PKG-INFO
