@@ -99,13 +99,36 @@ def randcodebs(digits):
     randcodebs = ''
     for rsbs in range(digits):
         rcbsR = randint(0,2)
-        if rcbsR==0:
+        if rcbsR == 0:
             randcodebs = randcodebs + str(randint(0, 9))
-        elif rcbsR==1:
+        elif rcbsR == 1:
             randcodebs = randcodebs + str(rcrandstr())
         else:
             randcodebs = randcodebs + str(randstrbs())
     return randcodebs
+#randsymbol:random symbol.
+#Use print(randsymbol()) to print it.
+def randsymbol():
+    rsym = ['`','!','@','#','$','%','^','&','*','(',')','_','-','=','+','[','{',']','}',';',':','"',"'",'<','>',',','.','/','?','\\','|']
+    rsymbol = choice(rsym)
+    return rsymbol
+#randcodeall:random all rand
+#Use print(randcodeall()) to print it.
+def randcodeall(digits):
+    if digits == 0:
+        raise RandomError("digits can't be 0!")
+    randcodeall = ''
+    for rcall in range(digits):
+        rcaR = randint(0,3)
+        if rcaR == 0:
+            randcodeall = randcodeall + str(randint(0,9))     #I was so annoying of this!Has lot of bugs when I update!!!
+        elif rcaR == 1:                                             #From LeonMMcoset at 2024/4/12,22:50
+            randcodeall = randcodeall + str(rcrandstr())            #Fix this annoying bug at 2024/4/12,22:54
+        elif rcaR == 2:
+            randcodeall = randcodeall + str(randstrbs())
+        else:
+            randcodeall = randcodeall + str(randsymbol())
+    return randcodeall
 #THIS MAY CRASH YOUR IDLE,PLEASE SAVE YOUR ALL FILES!!!
 def crashidle():
     print('This may crash your IDLE!!!')
@@ -138,6 +161,7 @@ def lrphelp():
     print('randstrbs() -> Random string that is big and small')
     print('randcodebs() -> Random code string that is big and small')
     print('lrpinfo() -> Leon Random Plus info')
+    print('randcodeall() -> Random all random thing')
     print('---Leon Random Plus Help End---')
 #Del. Leon Random Plus
 #OMG you are gonna delete Leon Random Plus???

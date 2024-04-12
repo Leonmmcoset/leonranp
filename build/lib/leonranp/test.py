@@ -1,2 +1,2 @@
 from __init__ import *
-crashidle()
+print(randcodeall(20))
