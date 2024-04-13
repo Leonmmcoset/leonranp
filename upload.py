@@ -1,5 +1,6 @@
 #To upload,run this python file.
 from os import *
+from time import *
 print('---Start Upload---')
 system(f'del /Q build')
 system(f'del /Q dist')
@@ -10,4 +11,5 @@ system(f'git add .')
 system(f'git commit -m "Normal update"')
 system(f'git pull origin main')
 system(f'git push -u origin main')
+sleep(3)
 print('---End Upload---')

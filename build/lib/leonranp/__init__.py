@@ -197,4 +197,7 @@ def sample():
     print('Thanks for use!')
 #Info for Leon Random Plus
 def lrpinfo():
-    import InfoWindow
+    if __name__ == "__main__":
+        import InfoWindow
+    else:
+        import leonranp.InfoWindow
