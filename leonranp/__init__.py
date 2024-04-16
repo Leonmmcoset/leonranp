@@ -33,7 +33,7 @@ def rcrandstr():
     return rcrandstr
 def randcode(digits):
     if digits == 0:
-        raise RandomError("Digits can't be 0!")
+        raise RandomError("digits can't be 0!")
     randcode = ''
     for i in range(digits):
         if randint(0,1)==0:
@@ -176,6 +176,7 @@ def sample():
     print('To check the source code of sample,go to http://http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranpsamplecode')
     print('1.Sample Captcha (6 digits)')
     print('2.Lucky Or Not')
+    print('3.Strong Password Generator')
     sample = int(input('Choose section:'))
     print('-------------------------')
     if sample == 1:
@@ -193,6 +194,9 @@ def sample():
         else:
             print('Oh no!You are not lucky today!')
             print('Go to http://leonmmcoset.jjmm.ink:8002/doku.php?id=iamnotlucky')
+    if sample == 2:
+        sam3 = input('Digits:')
+        print(randcodeall(sam3))
     print('--------------------------')
     print('Thanks for use!')
 #Info for Leon Random Plus
