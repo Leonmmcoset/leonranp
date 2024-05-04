@@ -194,7 +194,7 @@ def sample():
         else:
             print('Oh no!You are not lucky today!')
             print('Go to http://leonmmcoset.jjmm.ink:8002/doku.php?id=iamnotlucky')
-    if sample == 2:
+    if sample == 3:
         sam3 = input('Digits:')
         print(randcodeall(sam3))
     print('--------------------------')
